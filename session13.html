@@ -12,33 +12,47 @@
             margin: 0;
         }
         body{
-            background-color: whitesmoke;
+            width: 100vw;
+            height: 100vh;
+            background: url(https://cdn.pixabay.com/photo/2017/09/16/16/09/sea-2755908__480.jpg);
+            background-size: 100% 100%;
             text-align: center;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         form{
             width: 350px;
             height: 350px;
-            background-color: white;
+            background-color: rgba(255,255,255,.4);
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+            box-shadow: 0px 0px 20px rgb(255, 238, 0);
             margin: auto;
             padding: 15px;
             margin-top: 100px;
+            border: 10px solid yellow;
         }
-        .email,.pass,.login{
+        .email,.pass,.login, .cna{
             width: 100%;
             padding: 15px;
             border-radius: 5px;
             border: 1px solid rgba(0,0,0,.2);
         }
-        .login{
-            background-color: royalblue;
+        .login, .cna{
+            background-color: orangered;
             color: white;
             border: none;
             font-size: 18px;
             font-weight: bold;
             padding: 12px;
+        }
+        .login:active{
+            background-color: orange;
+        }
+        .cna{
+            width: 70%;
+            background-color: orange;
+        }
+        .cna:active{
+            background-color: orangered;
         }
         a{
             color: royalblue;
@@ -46,20 +60,30 @@
             text-decoration: none;
         }
         h1{
-            color: royalblue;
+            color: yellow;
+        }
+        div{
+            border-top: 1px solid rgba(0,0,0,.2);
+        }
+        p{
+            font-size: 22px;
+            color: orangered;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>My Book</h1><br><br>
-        <h2>My Book is the all in one social media site! <br> Join Now!</h2>
+        <p>My Book is the all in one social media site! <br> Join Now!</p>
     </header>
     <form action="">
-        <input type="email" class="email" placeholder="Email address or phone number"><br><br>
-        <input type="password" class="pass" placeholder="Password"><br><br>
+        <input type="email" class="email" placeholder="Email address or phone number" required><br><br>
+        <input type="password" class="pass" placeholder="Password" required><br><br>
         <input type="submit" value="Log In" class="login"><br><br>
-        <a href="">Forgotten password</a>
+        <a href="">Forgotten password?</a><br><br>
+        <div><br>
+            <button class="cna">Create New Account</button>
+        </div>
     </form>
     
 </body>
