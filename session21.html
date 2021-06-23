@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 21</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+        }
+        h1{
+            color: blue;
+        }
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Canvas</h1>
+    </header>
+    <canvas width="400" height="400" id="myCanvas">
+
+    </canvas>
+    
+</body>
+<script>
+    var draw = document.getElementById("myCanvas");
+    var line = draw.getContext("2d");
+    var line2 = draw.getContext("2d");
+    var line3 = draw.getContext("2d");
+
+    line2.moveTo(0,400);
+    line2.lineTo(400,0);
+    line2.stroke();
+
+    line3.moveTo(200,0);
+    line3.lineTo(200,400);
+    line3.stroke();
+
+    line.moveTo(0,0);
+    line.lineTo(400,400);
+    line.strokeStyle = "green";
+    line.stroke();
+
+    var box  = draw.getContext("2d");
+    box.rect(50,100,300,200);
+    box.fillStyle = 'red';
+    box.fill()
+    box.stroke();
+
+    var circle = draw.getContext("2d");
+    circle.beginPath();
+    circle.arc(200,200,100,0,2*Math.PI);
+    circle.fillStyle = "yellow";
+    circle.fill();
+    circle.stroke();
+
+    </script>
+</html>
