@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 24</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Storage APIs</h1>
+    </header>
+    <h2 id="myName"></h2>
+    <h2 id="day"></h2>
+
+</body>
+<script>
+    localStorage.setItem("myName", "Meher");
+
+    document.getElementById("myName").innerText =
+        localStorage.getItem("myName");
+
+    localStorage.removeItem("myName");
+
+    document.getElementById("myName").innerText =
+        localStorage.getItem("myName");
+
+    localStorage.meher = "Meher";
+
+    document.getElementById("myName").innerText =
+        localStorage.meher;
+
+    sessionStorage.day = "Sunday";
+    document.getElementById("day").innerText =
+        sessionStorage.day;
+
+</script>
+
+</html>

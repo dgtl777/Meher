@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 24</title>
+    <style>
+        body {
+            background-color: bisque;
+            text-align: center;
+        }
+
+        h1 {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Geolocation</h1>
+    </header>
+    <h2>My Location</h2>
+    <h2 id="myLocation"></h2>
+    <button onclick="getLocation()">
+        Get Location</button>
+
+</body>
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.
+                getCurrentPosition(showPos);
+        }
+        else {
+            document.getElementById("myLocation").
+                innerText = "Location Not Found"
+        }
+        function showPos(pos) {
+            document.getElementById("myLocation").
+                innerText = "Latitude"
+                + pos.coords.latitude +
+                "Longitude" + pos.coords.longitude;
+        }
+    }
+</script>
+
+</html>
