@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 31</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(purple, violet);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Image Maps</h1>
+    </header>
+    <img usemap="#myMap" width="400" height="300"
+        src="https://cdn.pixabay.com/photo/2017/10/23/05/56/summer-2880261_1280.jpg" alt="">
+    <map name="myMap">
+        <area shape="circle" coords="90,240,50" href="https://www.britannica.com/plant/coconut" alt="">
+        <area shape="rect" coords="150,50,250,150"
+            href="https://www.amazon.in/camera-photography/b?ie=UTF8&node=1388977031" alt="">
+        <area shape="poly" coords="250,240 400,120 350,250"
+            href="https://www.lenskart.com/sunglasses.html?utm_source=google&utm_medium=cpc&utm_campaign=Google-MainAcc-LK-Search-NonBrand-Sunglasses-BMM-Conv-050918&gclid=CjwKCAjwx8iIBhBwEiwA2quaqxf2S3HBsBkscN0Huvg38DwUuzhuMyLKaV53riNC3w0ZEcnf-2PFqxoCd_UQAvD_BwE"
+            alt="">
+    </map>
+
+</body>
+
+</html>

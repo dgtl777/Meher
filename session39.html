@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(bisque, green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #title {
+            color: green;
+            animation-name: title;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes title {
+            from {
+                transform: translateX(-50px) rotate(-15deg);
+            }
+
+            to {
+                transform: translateX(50px) rotate(15deg);
+            }
+        }
+
+        #score {
+            text-align: left;
+        }
+
+        u {
+            color: green;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            border: 10px solid white;
+            display: none;
+        }
+
+        h4 {
+            color: white;
+        }
+
+        #a1,
+        #a2,
+        #a3,
+        button {
+            width: 150px;
+            padding: 10px;
+            border: 4px solid white;
+        }
+
+        button {
+            background-color: orange;
+
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="score">Score: 0</h1>
+        <u>
+            <h1 id="title">Riddle Master</h1>
+        </u>
+    </header>
+    <h3>1.What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="a1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button><br><br>
+    <img id="h1"
+        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png"
+        alt="">
+    <h3>Result</h3>
+    <h4 id="r1"></h4>
+
+    <h3>2.I’m tall when I’m young, and I’m short when I’m old. What am I?</h3>
+    <input type="text" name="" id="a2">
+    <button onclick="q2()">Submit Answer</button>
+    <button onclick="h2()">Hint</button><br><br>
+    <img id="h2" src="https://candlewic.com/wp-content/uploads/2020/03/CW_CandleLine-2.jpg" alt="">
+    <h3>Result</h3>
+    <h4 id="r2"></h4>
+
+</body>
+<script>
+    var score = 0;
+    function q1() {
+        var a1 = document.getElementById("a1").value;
+
+        if (a1.toUpperCase() == "EGG") {
+            document.getElementById("r1").innerText =
+                "Correct Answer"
+            document.getElementById("score").innerText =
+                "Score: " + (score + 1);
+            score = score + 1;
+        }
+        else {
+            document.getElementById("r1").innerText =
+                "Wrong Answer"
+
+        }
+    }
+    function h1() {
+        document.getElementById("h1").style.display =
+            "inline-block";
+    }
+
+    function q2() {
+        var a2 = document.getElementById("a2").value;
+
+        if (a2.toUpperCase() == "CANDLE") {
+            document.getElementById("r2").innerText =
+                "Correct Answer"
+            document.getElementById("score").innerText =
+                "Score: " + (score + 1);
+            score = score + 1;
+        }
+        else {
+            document.getElementById("r2").innerText =
+                "Wrong Answer"
+        }
+    }
+    function h2() {
+        document.getElementById("h2").style.display =
+            "inline-block";
+    }
+</script>
+
+</html>
